@@ -64,6 +64,18 @@ h2{font-size:28px;font-weight:500;margin-bottom:8px}
 .tl .when{font-family:'Ubuntu Mono',monospace;font-size:13px;color:var(--mute)}
 .tl h4{font-size:17px;font-weight:500}
 .tl p{font-size:14.5px;color:var(--ink2)}
+.earlier{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ec{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:22px;display:flex;flex-direction:column}
+.ec .org{font-size:13px;color:var(--mute);font-family:'Ubuntu Mono',monospace}
+.ec .org a{color:var(--teal-d)}
+.ec h3{font-size:19px;font-weight:500;margin:6px 0 8px;line-height:1.3}
+.ec p{font-size:14.5px;color:var(--ink2)}
+.ec ul{list-style:none;margin-top:10px}
+.ec li{position:relative;padding-left:18px;font-size:14px;color:var(--ink2);margin-bottom:5px}
+.ec li:before{content:"";position:absolute;left:0;top:.7em;width:9px;height:2px;background:var(--teal)}
+.ec .chips{margin-top:auto;padding-top:14px}
+.tl a{color:inherit;text-decoration-color:var(--teal);text-underline-offset:3px}
+@media (max-width:860px){.earlier{grid-template-columns:1fr}}
 footer{padding:56px 0 72px;border-top:1px solid var(--line)}
 .contact{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
 .contact .c{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 16px;font-size:15px;text-decoration:none}
@@ -79,7 +91,7 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line)}
 </head>
 <body>
 <nav><div class="wrap"><a class="logo" href="/" style="text-decoration:none">julian<b>.</b>garcia</a>
-<div class="links"><a href="#work">Work</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div></div></nav>
+<div class="links"><a href="#work">Work</a><a href="#earlier">Before Amazon</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div></div></nav>
 
 <header class="wrap">
   <div class="eyebrow">// Software Engineer · ads &amp; measurement</div>
@@ -173,6 +185,34 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line)}
   </div>
 </div></section>
 
+<section id="earlier"><div class="wrap">
+  <h2>Before Amazon</h2>
+  <p class="sub">Defense, national-lab and public-sector systems where reliability was not optional.</p>
+  <div class="earlier">
+    <div class="ec">
+      <div class="org">Inalab Consulting · 2024-2025</div>
+      <h3>Lead engineer on a classified DoD system upgrade</h3>
+      <p>One of two engineers on a Top Secret/SCI Department of Defense program. I led the upgrade of the entire system, from design through delivery.</p>
+      <ul><li>Owned the upgrade end to end as lead engineer</li><li>Modernized high-volume data-processing pipelines in C++</li><li>Added monitoring and logging to find and remove bottlenecks</li></ul>
+      <div class="chips"><span>C++</span><span>Systems engineering</span><span>Data pipelines</span></div>
+    </div>
+    <div class="ec">
+      <div class="org"><a href="https://www.sandia.gov">Sandia National Laboratories</a> · 2023</div>
+      <h3>Satellite data on distributed compute we built ourselves</h3>
+      <p>Application engineer on a Department of Energy space data acquisition program, processing large volumes of satellite data.</p>
+      <ul><li>Java pipelines ingesting high-volume satellite data</li><li>Distributed compute the team designed and built in-house, on-premises with no cloud</li><li>Strict latency and reliability requirements</li></ul>
+      <div class="chips"><span>Java</span><span>Distributed computing</span><span>On-prem</span></div>
+    </div>
+    <div class="ec">
+      <div class="org"><a href="https://www.icasa.nmt.edu">ICASA</a> at <a href="https://www.nmt.edu">New Mexico Tech</a> · 2021-2023</div>
+      <h3>The evidence system behind a District Attorney's prosecutions</h3>
+      <p>The Second Judicial District Attorney's Office couldn't take high-profile cases to trial because police evidence wasn't being submitted correctly. We built a system that made correct submission simple, and it was adopted across Bernalillo County.</p>
+      <ul><li>Spring Boot microservices on clustered networking, with React frontends</li><li>Interest from other New Mexico counties and California</li><li>Worked directly with stakeholders up to the District Attorney; promoted from intern to full-time</li></ul>
+      <div class="chips"><span>Java · Spring Boot</span><span>React</span><span>Clustered networking</span></div>
+    </div>
+  </div>
+</div></section>
+
 <section id="skills"><div class="wrap">
   <h2>Skills</h2><p class="sub">What I reach for.</p>
   <div class="skills">
@@ -187,10 +227,10 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line)}
   <h2>Experience</h2><p class="sub">5 years across streaming, defense, research and government systems.</p>
   <div class="tl">
     <div class="it"><div class="when">2025 - now</div><h4>Software Development Engineer II · Amazon Prime Video</h4><p>Playback quality measurement, lab platform and AI agents. Promoted from SDE I.</p></div>
-    <div class="it"><div class="when">2024 - 2025</div><h4>Software Developer · Inalab Consulting</h4><p>High-volume data pipelines and monitoring for DoD systems.</p></div>
-    <div class="it"><div class="when">2023</div><h4>Application Engineer · Sandia National Labs</h4><p>Streaming sensor-data pipelines for DoE space data acquisition.</p></div>
-    <div class="it"><div class="when">2021 - 2023</div><h4>Software Developer · NMT ICASA</h4><p>Spring Boot microservices and React for an NM Department of Justice case-management system.</p></div>
-    <div class="it"><div class="when">2022</div><h4>B.S. Computer Science · New Mexico Tech</h4></div>
+    <div class="it"><div class="when">2024 - 2025</div><h4>Software Developer · Inalab Consulting</h4><p>Lead engineer on a two-person team upgrading a classified DoD system in C++.</p></div>
+    <div class="it"><div class="when">2023</div><h4>Application Engineer · <a href="https://www.sandia.gov">Sandia National Labs</a></h4><p>Satellite-data pipelines in Java on in-house, on-prem distributed compute for DoE space data acquisition.</p></div>
+    <div class="it"><div class="when">2021 - 2023</div><h4>Software Developer · <a href="https://www.icasa.nmt.edu">ICASA</a>, <a href="https://www.nmt.edu">New Mexico Tech</a></h4><p>Evidence-submission system for the Second Judicial District Attorney, adopted across Bernalillo County. Intern to full-time.</p></div>
+    <div class="it"><div class="when">2022</div><h4>B.S. Computer Science · <a href="https://www.nmt.edu">New Mexico Tech</a></h4></div>
   </div>
 </div></section>
 
