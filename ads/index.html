@@ -135,7 +135,9 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line)}
       <p>A streaming client reports its own startup time, so checking it against its own telemetry proves nothing. I built a measurement system that watches the actual video output of each device and times what the customer sees.</p>
       <ul>
         <li>Measures time-to-first-frame, rebuffering, bitrate, bandwidth, abandons and fatal errors on every device family</li>
-        <li>Network impairment via switch-port policing to induce real-world conditions</li>
+        <li>Per-run coded-flash calibration replaced a fixed 2.6 s capture-delay constant; real delays ranged 0.4-2.4 s</li>
+        <li>Native remote protocols cut press latency from 100-200 ms over IR to 3-15 ms on Roku and Apple TV</li>
+        <li>Network impairment as QoS policy on the lab switches, retiring dedicated impairment appliances</li>
         <li>Showed a fleet-wide startup metric understated what customers experience by 1-3 seconds</li>
       </ul>
       <div class="chips"><span>Python</span><span>Video capture (SRT)</span><span>Vision models</span><span>AWS</span></div>
@@ -146,11 +148,11 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line)}
     <div>
       <div class="tag">LLM agents · Tool use</div>
       <h3>A lab agent that runs tests, watches devices and proposes fixes</h3>
-      <p>A tool-use agent on AWS Bedrock with 63 tools: it can run a test, read a device's live video and telemetry, and diagnose a failure. Fixes go through a gated path: diagnose, propose, typed confirmation, execute, audit, verify.</p>
+      <p>I designed the tool-calling architecture of my team's 63-tool agent on AWS Bedrock and built its lab, results and remediation tools. It can run a test, read a device's live video and telemetry, and diagnose a failure. Fixes go through a gated path: diagnose, propose, typed confirmation, execute, audit, verify. Success means a passing test, not a cleared alert.</p>
       <ul>
         <li>Risk graded by what a change touches, with rate limits counted from the audit log</li>
         <li>Smaller models for mechanical steps, larger ones only where they pay off</li>
-        <li>Designed the tool-calling architecture of the team's support bot, built with an intern I mentored</li>
+        <li>Designed the tool-calling architecture of the team's support bot and wrote its first tools</li>
       </ul>
       <div class="chips"><span>AWS Bedrock</span><span>Agent design</span><span>TypeScript</span><span>Python</span></div>
     </div>
@@ -160,10 +162,11 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line)}
     <div>
       <div class="tag">Full-stack platform</div>
       <h3>One operations surface for a 270-device lab</h3>
-      <p>The team had four separate tools for scheduling, accounts, debugging and device state, and none of them belonged to it. I built a single platform for all of it, with no spec and nobody asking for it, and it became the team's daily driver.</p>
+      <p>My team's single surface for scheduling, results, the device lab, data-quality reports and test accounts. I became its primary engineer after the first version and have written most of it since, across the React frontend, the backend and the CDK infrastructure. It is the team's daily driver.</p>
       <ul>
         <li>Job scheduler, live device state, in-browser live video of any device, statistics and reports</li>
         <li>Lab monitor raised reachable devices from 4 to 37 and cut open faults from 39 to 6</li>
+        <li>Moved device families onto managed ECS runs; scale-in protection means deploys no longer kill in-flight tests</li>
         <li>111 React components, 8 CDK stacks; authored 82% of 1,400+ commits</li>
       </ul>
       <div class="chips"><span>React</span><span>TypeScript</span><span>Lambda</span><span>DynamoDB</span><span>Redshift</span><span>CDK</span></div>
@@ -226,7 +229,7 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line)}
 <section id="experience"><div class="wrap">
   <h2>Experience</h2><p class="sub">5 years across streaming, defense, research and government systems.</p>
   <div class="tl">
-    <div class="it"><div class="when">2025 - now</div><h4>Software Development Engineer II · Amazon Prime Video</h4><p>Playback quality measurement, lab platform and AI agents. Promoted from SDE I.</p></div>
+    <div class="it"><div class="when">2025 - now</div><h4>Software Development Engineer II · Amazon Prime Video</h4><p>Playback quality measurement, lab platform and AI agents. Promoted from SDE I. Wrote a design guide for, and serve as technical reference to, another org's test-platform migration; traveled to London to onboard a partner team onto our test framework; mentored two engineers and an intern.</p></div>
     <div class="it"><div class="when">2024 - 2025</div><h4>Software Developer · Inalab Consulting</h4><p>Lead engineer on a two-person team upgrading a classified DoD system in C++.</p></div>
     <div class="it"><div class="when">2023</div><h4>Application Engineer · <a href="https://www.sandia.gov">Sandia National Labs</a></h4><p>Satellite-data pipelines in Java on in-house, on-prem distributed compute for DoE space data acquisition.</p></div>
     <div class="it"><div class="when">2021 - 2023</div><h4>Software Developer · <a href="https://www.icasa.nmt.edu">ICASA</a>, <a href="https://www.nmt.edu">New Mexico Tech</a></h4><p>Evidence-submission system for the Second Judicial District Attorney, adopted across Bernalillo County. Intern to full-time.</p></div>
