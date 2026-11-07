@@ -27,11 +27,11 @@ header{padding:84px 0 64px}
 h1{font-size:clamp(40px,6vw,64px);line-height:1.05;font-weight:500;margin:14px 0 18px;letter-spacing:-1px}
 h1 span{color:var(--teal)}
 .lede{font-size:clamp(17px,2vw,20px);color:var(--ink2);max-width:680px}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.lede+.lede{margin-top:10px} .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:8px;text-decoration:none;font-size:15px;font-weight:500;border:1px solid var(--ink)}
 .btn.primary{background:var(--ink);color:#fff}
 .btn:hover{transform:translateY(-1px)}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:56px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:56px}
 .stat{background:var(--card);padding:20px}
 .stat .n{font-size:30px;font-weight:700;color:var(--teal-d)}
 .stat .l{font-size:13px;color:var(--mute)}
@@ -100,8 +100,9 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line)}
 <div class="links"><a href="#work">Work</a><a href="#earlier">Before Amazon</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div></div></nav>
 
 <header class="wrap">
-  <div class="eyebrow">// Software Engineer · AI agents &amp; streaming systems</div>
+  <div class="eyebrow">Software Developer</div>
   <h1>Software engineer for <span>streaming and applied AI</span>.</h1>
+  <p class="lede">A software developer with practical experience, a strong work ethic, and an ambition to learn.</p>
   <p class="lede">SDE II at Amazon Prime Video, working on streaming quality, test platforms and applied AI. Previously defense, national-lab and public-sector systems.</p>
   <div class="cta">
     <a class="btn primary" href="#work">See the work</a>
@@ -109,7 +110,6 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line)}
     <a class="btn" href="#contact">Get in touch</a>
   </div>
   <div class="stats">
-    <div class="stat"><div class="n">5</div><div class="l">years building production systems</div></div>
     <div class="stat"><div class="n">270</div><div class="l">device streaming lab</div></div>
     <div class="stat"><div class="n">8</div><div class="l">device families automated</div></div>
     <div class="stat"><div class="n">63</div><div class="l">tools in a production AI assistant</div></div>
@@ -178,23 +178,23 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line)}
   <div class="earlier">
     <div class="ec">
       <div class="org">Inalab Consulting · 2024-2025</div>
-      <h3>Lead engineer, classified DoD system</h3>
-      <p>Led the upgrade of a Top Secret/SCI Department of Defense system as one of a two-person team, from design through delivery.</p>
+      <h3>Lead engineer, C++ system modernization</h3>
+      <p>Led a C++ system upgrade on a two-person team, owning the work from design through delivery.</p>
       <ul><li>System-wide modernization in C++</li><li>Performance monitoring and tuning</li></ul>
       <div class="chips"><span>C++</span><span>Systems engineering</span></div>
     </div>
     <div class="ec">
       <div class="org"><a href="https://www.sandia.gov">Sandia National Laboratories</a> · 2023</div>
       <h3>Application engineer, space data acquisition</h3>
-      <p>Built satellite-data pipelines for a Department of Energy program, running on distributed compute the team built in-house.</p>
-      <ul><li>High-volume data processing in Java</li><li>On-premises distributed computing</li></ul>
+      <p>Built high-volume Java pipelines for satellite data and helped develop the team's in-house, on-premises distributed computing infrastructure.</p>
+      <ul><li>High-volume data processing in Java</li><li>Development compute pools for the satellite data processing system</li></ul>
       <div class="chips"><span>Java</span><span>Distributed systems</span></div>
     </div>
     <div class="ec">
       <div class="org"><a href="https://www.icasa.nmt.edu">ICASA</a> at <a href="https://www.nmt.edu">New Mexico Tech</a> · 2021-2023</div>
-      <h3>Evidence system for a District Attorney</h3>
-      <p>Built the evidence-submission system for the Second Judicial District Attorney's Office, adopted across Bernalillo County and drawing interest from other counties and states.</p>
-      <ul><li>Worked directly with stakeholders up to the District Attorney</li><li>Promoted from intern to full-time</li></ul>
+      <h3>County case management and research software</h3>
+      <p>Built an evidence submission and case management system while working at NMT ICASA on a contract for Bernalillo County's Department of Justice.</p>
+      <ul><li>Built Spring Boot services and React interfaces for evidence intake, reporting, and document workflows.</li><li>Built a separate website for ICASA’s research on how different types of criminal cases cluster in random networks.</li></ul>
       <div class="chips"><span>Java · Spring Boot</span><span>React</span></div>
     </div>
   </div>
@@ -211,12 +211,12 @@ footer{padding:56px 0 72px;border-top:1px solid var(--line)}
 </div></section>
 
 <section id="experience"><div class="wrap">
-  <h2>Experience</h2><p class="sub">5 years across streaming, defense, research and government systems.</p>
+  <h2>Experience</h2><p class="sub">Software development across streaming, distributed computing, research, and public-sector systems.</p>
   <div class="tl">
     <div class="it"><div class="when">2025 - now</div><h4>Software Development Engineer II · Amazon Prime Video</h4><p>Streaming quality, test platforms and applied AI. Promoted from SDE I; technical reference for partner teams; mentor.</p></div>
-    <div class="it"><div class="when">2024 - 2025</div><h4>Software Developer · Inalab Consulting</h4><p>Lead engineer on a classified DoD system upgrade.</p></div>
-    <div class="it"><div class="when">2023</div><h4>Application Engineer · <a href="https://www.sandia.gov">Sandia National Labs</a></h4><p>Satellite-data pipelines on in-house distributed compute.</p></div>
-    <div class="it"><div class="when">2021 - 2023</div><h4>Software Developer · <a href="https://www.icasa.nmt.edu">ICASA</a>, <a href="https://www.nmt.edu">New Mexico Tech</a></h4><p>Evidence system for the Second Judicial District Attorney. Intern to full-time.</p></div>
+    <div class="it"><div class="when">2024 - 2025</div><h4>Software Developer · Inalab Consulting</h4><p>Led a C++ system modernization on a two-person team.</p></div>
+    <div class="it"><div class="when">2023</div><h4>Application Engineer · <a href="https://www.sandia.gov">Sandia National Labs</a></h4><p>Java satellite data pipelines and on-premises distributed computing infrastructure for the team’s processing system.</p></div>
+    <div class="it"><div class="when">2021 - 2023</div><h4>Software Developer · <a href="https://www.icasa.nmt.edu">ICASA</a>, <a href="https://www.nmt.edu">New Mexico Tech</a></h4><p>County case management software and a separate random networks research website.</p></div>
     <div class="it"><div class="when">2022</div><h4>B.S. Computer Science · <a href="https://www.nmt.edu">New Mexico Tech</a></h4></div>
   </div>
 </div></section>
